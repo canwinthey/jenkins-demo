@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class JenkinsDemoApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void testing() {
+		assert(1==1);
 	}
 
 }
