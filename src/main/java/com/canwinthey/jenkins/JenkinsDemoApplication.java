@@ -10,6 +10,7 @@ public class JenkinsDemoApplication {
 		SpringApplication.run(JenkinsDemoApplication.class, args);
 		System.out.println("Welcome to JenkinsDemoApplication!!");
 		System.out.println("Prasanna's 2nd edit");
+		System.out.println("Added server.address=0.0.0.0 in application.properties");
 	}
 
 }
