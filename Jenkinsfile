@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    environment {
+        GIT_REPO = 'https://github.com/canwinthey/jenkins-demo.git'
+    }
     stages {
         stage('checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/canwinthey/jenkins-demo.git'
+                withCredentials([string(credentialsId: 'GITHUB_PAT', variable: 'TOKEN')]) {
+                   git branch: 'master', url: "https://${TOKEN}@github.com/canwinthey/jenkins-demo.git"
+                }
             }
         }
         stage('build') {
