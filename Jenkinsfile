@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        GIT_REPO = 'https://github.com/canwinthey/jenkins-demo.git'
-    }
     stages {
         stage('checkout') {
             steps {
