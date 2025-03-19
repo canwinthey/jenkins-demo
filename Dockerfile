@@ -7,3 +7,4 @@ WORKDIR /app
 # Copy the JAR file from target/ to the container
 COPY target/*.jar .
 
+ENTRYPOINT ["java", "-jar", "/app/*.jar"]
